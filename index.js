@@ -3,9 +3,15 @@ const api_url = 'https://type.fit/api/quotes';
 const btn = document.querySelector('.btn');
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
+const switchTheme = document.querySelector('.theme-switcher');
+const wrapper = document.querySelector('.main');
 
 btn.addEventListener('click', () => {
   getAPI(api_url);
+});
+
+switchTheme.addEventListener('click', () => {
+  wrapper.classList.toggle('light-theme');
 });
 
 const getAPI = (url) => {

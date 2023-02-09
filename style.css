@@ -11,6 +11,7 @@
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +47,7 @@
 .quote::after {
   content: '';
   position: absolute;
-  bottom: -63px;
+  bottom: -62px;
   left: 50px;
   width: 60px;
   height: 60px;
@@ -81,4 +82,38 @@
   border-radius: 1.2rem;
   padding: 1rem 2.5rem;
   cursor: pointer;
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 4rem;
+  height: 1.5rem;
+  appearance: none;
+  background-color: #a6a6a6;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.theme-switcher::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.theme-switcher:checked::before {
+  left: 2.5rem;
+}
+
+.light-theme {
+  --bg: #f9f9f9;
+  --highlight: #333;
+  --text: #333;
 }
